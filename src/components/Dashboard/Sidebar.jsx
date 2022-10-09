@@ -1,34 +1,26 @@
 import React from "react";
+import Logo from "../../assets/Logo.png";
 
 const Sidebar = () => {
   return (
     <aside class="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
       <div>
-        <div class="-mx-2 px-8 py-4">
-          <a href="./" title="home">
-            <span className="text-2xl font-bold tracking-wide text-sky-600 uppercase">
-              goat-day
-            </span>
-          </a>
-        </div>
-
-        <div class="mt-8 text-center">
+        <div class="mt-10 text-center">
           <img
-            src="https://lastfm.freetls.fastly.net/i/u/ar0/cda8a2406d8561e60d8d5cab2c46f57c"
+            src={Logo}
             alt=""
-            class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28"
+            class="w-24 h-10 m-auto object-cover lg:w-44 lg:h-20"
           />
-          <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">
+          <h5 class="mt-4 text-xl font-semibold text-gray-600 block">
             Taylor Swift
           </h5>
-          <span class="hidden text-gray-400 lg:block">Admin</span>
+          <span class="text-gray-400 block">Admin</span>
         </div>
 
         <ul class="space-y-2 tracking-wide mt-8">
           <li>
             <a
               href="#"
-              aria-label="dashboard"
               class="relative px-4 py-3 flex items-center space-x-4 hover:rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400"
             >
               <svg class="-ml-1 h-6 w-6" viewBox="0 0 24 24" fill="none">
@@ -48,6 +40,7 @@ const Sidebar = () => {
               <span class="-mr-1 font-medium">Dashboard</span>
             </a>
           </li>
+
           <li>
             <a
               href="#"
@@ -73,6 +66,7 @@ const Sidebar = () => {
               <span class="-mr-1 font-medium">Categories</span>
             </a>
           </li>
+
           <li>
             <a
               href="#"
@@ -98,6 +92,7 @@ const Sidebar = () => {
               <span class="-mr-1 font-medium">Reports</span>
             </a>
           </li>
+
           <li>
             <a
               href="#"
@@ -121,6 +116,7 @@ const Sidebar = () => {
               <span class="-mr-1 font-medium">Other data</span>
             </a>
           </li>
+
           <li>
             <a
               href="#"
@@ -144,6 +140,32 @@ const Sidebar = () => {
                 />
               </svg>
               <span class="-mr-1 font-medium">Finance</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="relative px-4 py-3 flex items-center space-x-4 hover:rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  class="fill-current text-gray-300 group-hover:text-cyan-300"
+                  d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"
+                />
+                <path
+                  class="fill-current text-gray-600 group-hover:text-cyan-600"
+                  fill-rule="evenodd"
+                  d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="-mr-1 font-medium">Content</span>
             </a>
           </li>
         </ul>

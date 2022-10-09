@@ -1,16 +1,15 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
+import Logo from "../../assets/Logo.png";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
   const navRef = useRef();
 
   const navigation = [
-    { title: "Lorem", path: "./" },
-    { title: "Lorem", path: "./" },
-    { title: "Lorem", path: "./" },
-    { title: "Lorem", path: "./" },
-    { title: "Lorem", path: "./" },
+    { title: "Beranda", path: "./" },
+    { title: "Produk", path: "./" },
+    { title: "Mitra", path: "./" },
   ];
 
   useEffect(() => {
@@ -33,12 +32,9 @@ const Navbar = () => {
   return (
     <nav ref={navRef} className="bg-white w-full top-0 z-20 lg:fixed">
       <div className="items-center px-4 max-w-screen-2xl mx-auto lg:flex lg:px-8 shadow-lg">
-        <div className="flex items-center justify-between py-3 lg:py-4 lg:block">
-          <a href="./">
-            <span className="text-2xl font-bold tracking-wide text-sky-600 uppercase">
-              goat-day
-            </span>
-          </a>
+        <div className="flex items-center justify-between py-3 lg:block">
+          <img className="h-auto w-28" src={Logo} />
+
           <div className="lg:hidden">
             <button
               className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
@@ -76,6 +72,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+
         <div
           className={`flex-1 justify-between flex-row-reverse lg:overflow-visible lg:flex lg:pb-0 lg:pr-0 lg:h-auto ${
             state ? "h-screen pb-20 overflow-auto pr-4" : "hidden"
@@ -83,31 +80,6 @@ const Navbar = () => {
         >
           <div>
             <ul className="flex flex-col-reverse space-x-0 lg:space-x-6 lg:flex-row">
-              <li className="mt-8 mb-8 lg:mt-0 lg:mb-0">
-                <a href="./" className="text-gray-600 hover:text-indigo-600">
-                  Hubungi Kami
-                </a>
-              </li>
-              <li className="mt-4 lg:mt-0">
-                <a
-                  href="./"
-                  className="py-3 px-4 text-center border text-gray-600 hover:text-indigo-600 rounded-md block lg:inline lg:border-0"
-                >
-                  Masuk
-                </a>
-              </li>
-              <li className="mt-8 lg:mt-0">
-                <a
-                  href="./"
-                  className="py-3 px-4 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow block lg:inline"
-                >
-                  Daftar
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="flex-1">
-            <ul className="justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
               {navigation.map((item, idx) => {
                 return (
                   <li key={idx} className="text-gray-600 hover:text-indigo-600">
@@ -115,6 +87,14 @@ const Navbar = () => {
                   </li>
                 );
               })}
+              <li className="mt-8 lg:mt-0">
+                <a
+                  href="./"
+                  className="py-3 px-4 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow block cursor-pointer lg:inline"
+                >
+                  Masuk
+                </a>
+              </li>
             </ul>
           </div>
         </div>

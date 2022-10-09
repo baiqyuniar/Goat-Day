@@ -92,22 +92,22 @@ const Footer = () => {
             <nav className="flex justify-around md:flex-col font-medium list-none">
               <li>
                 <a href="#link" className="hover:text-gray-200">
-                  Lorem
+                  Beranda
                 </a>
               </li>
               <li>
                 <a href="#link" className="hover:text-gray-200">
-                  Lorem
+                  Produk
                 </a>
               </li>
               <li>
                 <a href="#link" className="hover:text-gray-200">
-                  Lorem
+                  Mitra
                 </a>
               </li>
               <li>
                 <a href="#link" className="hover:text-gray-200">
-                  Lorem
+                  Daftar
                 </a>
               </li>
             </nav>
