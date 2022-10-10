@@ -25,7 +25,6 @@ const Mitra = () => {
 
   return (
     <div className="relative mt-12 mx-auto py-10 w-full max-w-screen bg-white text-gray-700 lg:h-[65vh]">
-      {/* :TITLE CONTAINER */}
       <div className="mb-4 flex justify-center items-center">
         <span className="h-1 w-14 rounded-3xl bg-gray-700" />
         <h2 className="px-3 text-xl lg:text-2xl text-gray-700 font-bold font-oswald uppercase tracking-wider">
@@ -34,16 +33,8 @@ const Mitra = () => {
         <span className="h-1 w-14 rounded-3xl bg-gray-700" />
       </div>
 
-      <div className="mb-8 flex justify-center items-center">
-        <span className="px-3 text-lg rounded-full lg:text-base text-white font-light font-oswald bg-sky-700 hover:tracking-wider cursor-pointer">
-          Tertarik bergabung?
-        </span>
-      </div>
-
       <div className="mx-auto px-4 w-full max-w-7xl grid grid-cols-2 gap-y-4 sm:gap-y-10 lg:my-14">
-        {/* :PICTURES CONTAINER */}
         <div className="col-span-full lg:col-span-1 flex flex-col sm:flex-row justify-center items-center">
-          {/* ::Team members */}
           <ul className="mb-4 sm:mb-0 px-4 flex sm:flex-col justify-center items-center space-x-3 sm:space-x-0 sm:space-y-3">
             {partner.map((person, index) => (
               <li
@@ -63,7 +54,7 @@ const Mitra = () => {
               </li>
             ))}
           </ul>
-          {/* ::Picture selected team member */}
+
           <div className="rounded overflow-hidden">
             <img
               src={partner[member].picture}
@@ -73,19 +64,24 @@ const Mitra = () => {
           </div>
         </div>
 
-        {/* :DETAILS CONTAINER */}
+        {/* :DETAILS */}
         <div className="col-span-full lg:col-span-1 mx-auto lg:mx-2 max-w-xl flex flex-col justify-center space-y-4">
-          {/* ::Role */}
           <span className="font-bold uppercase tracking-wider">
             {partner[member].role}
           </span>
-          {/* ::Name */}
+
           <h3 className="text-4xl sm:text-5xl font-bold space-y-2">
             <span className="block">{partner[member].firstname}</span>
             <span className="block">{partner[member].lastname}</span>
           </h3>
-          {/* ::Description */}
+
           <p className="py-2 text-base">{partner[member].description}</p>
+
+          <div className="mb-8 flex">
+            <a className="px-3 text-lg rounded-full lg:text-base text-white font-light font-oswald bg-sky-700 hover:tracking-wider cursor-pointer">
+              Hubungi kami
+            </a>
+          </div>
         </div>
       </div>
     </div>

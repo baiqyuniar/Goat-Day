@@ -19,52 +19,57 @@ const Produk = () => {
 
         {/* :PRODUCT SUGGESTION */}
 
-        <div class="sm:flex flex-wrap justify-center items-center text-center gap-8 lg:my-10">
-          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 bg-white mt-6 hover:cursor-pointer shadow-lg rounded-lg">
-            <div class="flex-shrink-0">
-              <div class="flex items-center mx-auto justify-center h-16 w-16 rounded-md text-white">
+        <div className="sm:flex flex-wrap justify-center items-center text-center gap-8 lg:my-10">
+          <a
+            href="/Aqiqah"
+            className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 bg-white mt-6 hover:cursor-pointer shadow-lg rounded-lg"
+          >
+            <div className="flex-shrink-0">
+              <div className="flex items-center mx-auto justify-center h-16 w-16 rounded-md text-white">
                 <img className="h-12 w-12" src={kambing} />
               </div>
             </div>
-            <h3 class="text-2xl sm:text-xl text-gray-700 font-semibold  py-4">
+            <h3 className="text-2xl sm:text-xl text-gray-700 font-semibold  py-4">
               Aqiqah
             </h3>
-            <p class="text-md  text-gray-500  py-4">
+            <p className="text-md  text-gray-500  py-4">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae. explicabo.
             </p>
-          </div>
-          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 mt-6 sm:mt-16 md:mt-20 lg:mt-24 bg-white hover:cursor-pointer shadow-lg rounded-lg">
-            <div class="flex-shrink-0">
-              <div class="flex items-center mx-auto justify-center h-16 w-16 rounded-md text-white">
+          </a>
+
+          <a className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 mt-6 sm:mt-16 md:mt-20 lg:mt-24 bg-white hover:cursor-pointer shadow-lg rounded-lg">
+            <div className="flex-shrink-0">
+              <div className="flex items-center mx-auto justify-center h-16 w-16 rounded-md text-white">
                 <img className="h-12 w-12" src={kambing} />
               </div>
             </div>
-            <h3 class="text-2xl sm:text-xl text-gray-700 font-semibold  py-4">
+            <h3 className="text-2xl sm:text-xl text-gray-700 font-semibold  py-4">
               Qurban
             </h3>
-            <p class="text-md text-gray-500 py-4">
+            <p className="text-md text-gray-500 py-4">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae. explicabo.
             </p>
-          </div>
-          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 mt-6 px-4 py-4 bg-white shadow-lg rounded-lg hover:cursor-pointer">
-            <div class="flex-shrink-0">
-              <div class="flex items-center mx-auto justify-center h-16 w-16 rounded-md text-white">
+          </a>
+
+          <a className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 mt-6 px-4 py-4 bg-white shadow-lg rounded-lg hover:cursor-pointer">
+            <div className="flex-shrink-0">
+              <div className="flex items-center mx-auto justify-center h-16 w-16 rounded-md text-white">
                 <img className="h-12 w-12" src={kambing} />
               </div>
             </div>
-            <h3 class="text-2xl sm:text-xl text-gray-700 font-semibold  py-4">
+            <h3 className="text-2xl sm:text-xl text-gray-700 font-semibold  py-4">
               Susu Kambing
             </h3>
-            <p class="text-md  text-gray-500 py-4">
+            <p className="text-md  text-gray-500 py-4">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae. explicabo.
             </p>
-          </div>
+          </a>
         </div>
       </div>
     </div>

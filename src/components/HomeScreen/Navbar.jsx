@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
 
 const Navbar = () => {
@@ -7,9 +8,9 @@ const Navbar = () => {
   const navRef = useRef();
 
   const navigation = [
-    { title: "Beranda", path: "./" },
-    { title: "Produk", path: "./" },
-    { title: "Mitra", path: "./" },
+    { title: "Beranda", path: "/" },
+    { title: "Produk", path: "/Produk" },
+    { title: "Mitra", path: "/Mitra" },
   ];
 
   useEffect(() => {
@@ -88,12 +89,12 @@ const Navbar = () => {
                 );
               })}
               <li className="mt-8 lg:mt-0">
-                <a
-                  href="./"
+                <Link
+                  to="/Login"
                   className="py-3 px-4 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow block cursor-pointer lg:inline"
                 >
                   Masuk
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

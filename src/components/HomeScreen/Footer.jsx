@@ -3,18 +3,14 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="w-full py-5 sm:py-10 px-4 bg-gray-800">
-      {/* Container */}
       <h2 className="sr-only">Footer</h2>
       <div className="flex flex-col-reverse sm:flex-row md:justify-between lg:justify-around">
-        {/* :SITE NAME & SOCIAL NETWORKS */}
         <div className="relative mt-14 sm:mt-0 px-5 flex flex-col justify-center items-center text-white">
-          {/* ::Site name */}
           <h1 className="font-title text-4xl text-center font-semibold mt-auto">
             GOAT-DAY
           </h1>
-          {/* ::Social & copyright */}
+
           <div className="mt-auto flex flex-col justify-center items-center">
-            {/* :::Social */}
             <span className="inline-flex mt-6 w-full justify-center md:justify-start md:w-auto">
               {/* Facebook */}
               <a href="#link" className="text-gray-200">
@@ -72,10 +68,10 @@ const Footer = () => {
                 </svg>
               </a>
             </span>
-            {/* :::Copyright */}
-            <span className="py-4 text-xs"></span>
+
+            <span className="py-4 text-xs" />
           </div>
-          {/* ::Mobile separator line */}
+
           <span
             className="sm:hidden absolute -top-4 left-1/2 w-1/4 h-px bg-gray-400 transform -translate-x-1/2"
             aria-hidden="true"
@@ -84,27 +80,30 @@ const Footer = () => {
 
         {/* :NAVIGATION */}
         <div className="grid grid-cols-2 gap-5 text-gray-400">
-          {/* ::Navigation */}
           <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4">
             <h3 className="py-1.5 md:py-4 text-center sm:text-left text-xl text-gray-500 font-bold tracking-wide">
               Menu
             </h3>
+
             <nav className="flex justify-around md:flex-col font-medium list-none">
               <li>
                 <a href="#link" className="hover:text-gray-200">
                   Beranda
                 </a>
               </li>
+
               <li>
                 <a href="#link" className="hover:text-gray-200">
                   Produk
                 </a>
               </li>
+
               <li>
                 <a href="#link" className="hover:text-gray-200">
                   Mitra
                 </a>
               </li>
+
               <li>
                 <a href="#link" className="hover:text-gray-200">
                   Daftar
@@ -112,6 +111,7 @@ const Footer = () => {
               </li>
             </nav>
           </div>
+
           {/* ::Address */}
           <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4 flex flex-col items-center sm:items-start">
             <h3 className="py-1.5 md:py-4 text-xl text-gray-500 font-bold tracking-wide">
@@ -121,6 +121,7 @@ const Footer = () => {
               101 Paradise Road, 97460
             </p>
           </div>
+
           {/* ::Email */}
           <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4 flex flex-col items-center sm:items-start">
             <h3 className="py-1.5 md:py-4 text-xl text-gray-500 font-bold tracking-wide">
@@ -139,6 +140,7 @@ const Footer = () => {
               <a href="#email">goatday123@gmail.com</a>
             </p>
           </div>
+
           {/* ::Phone */}
           <div className="col-span-2 md:col-span-1 pb-0 md:py-3 px-4 flex flex-col items-center sm:items-start">
             <h3 className="py-1.5 md:py-4 text-xl text-gray-500 font-bold tracking-wide">
