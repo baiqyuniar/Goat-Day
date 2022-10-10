@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import Logo from "../../assets/Logo.png";
 
 const Login = () => {
+  const [open, setOpen] = useState(false);
+
+  const toggle = () => {
+    setOpen(!open);
+  };
+
   return (
     <div className="w-full h-screen font-sans bg-slate-300">
+      <img className="h-auto w-44 top-4 z-20 lg:fixed mx-3" src={Logo} />
+
       <div className="container flex items-center justify-center flex-1 h-full mx-auto">
         <div className="w-full max-w-lg">
           <div className="leading-loose">
-            <form className="max-w-sm p-10 m-auto bg-white bg-opacity-25 rounded shadow-xl">
+            <form className="max-w-md p-10 m-auto bg-white bg-opacity-25 rounded shadow-xl">
               <p className="mb-8 text-2xl font-semibold text-center text-black">
                 Masuk
               </p>
@@ -14,7 +24,7 @@ const Login = () => {
                 <div className=" relative ">
                   <input
                     type="text"
-                    id="login-with-bg-email"
+                    id="email"
                     className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-sky-600 focus:border-transparent"
                     placeholder="email"
                   />
@@ -23,11 +33,18 @@ const Login = () => {
               <div className="mb-2">
                 <div className=" relative ">
                   <input
-                    type="text"
-                    id="login-with-bg-password"
+                    type={open === false ? "password" : "text"}
+                    id="password"
                     className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-sky-600 focus:border-transparent"
                     placeholder="password"
                   />
+                  <div className="text-2xl absolute top-[10px] right-3">
+                    {open === false ? (
+                      <AiFillEye onClick={toggle} />
+                    ) : (
+                      <AiFillEyeInvisible onClick={toggle} />
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="flex items-center justify-between mt-4">
@@ -39,12 +56,15 @@ const Login = () => {
                 </button>
               </div>
               <div className="text-center">
-                <a className="right-0 inline-block text-sm font-light align-baseline text-500 hover:text-gray-800">
+                <span className="right-0 inline-block text-sm font-light align-baseline text-500 hover:text-gray-800">
                   Tidak punya akun?
-                </a>
-                <span className="ml-1 inline-block text-sm font-semibold align-baseline text-500 hover:text-blue-800 cursor-pointer">
-                  Buat akun
                 </span>
+                <a
+                  href="Register"
+                  className="ml-1 inline-block text-sm font-semibold align-baseline text-500 hover:text-blue-800 cursor-pointer"
+                >
+                  Buat akun
+                </a>
               </div>
             </form>
           </div>

@@ -8,7 +8,7 @@ const Navbar = () => {
   const navRef = useRef();
 
   const navigation = [
-    { title: "Beranda", path: "/" },
+    { title: "Beranda", path: "/Beranda" },
     { title: "Produk", path: "/Produk" },
     { title: "Mitra", path: "/Mitra" },
   ];
@@ -83,8 +83,11 @@ const Navbar = () => {
             <ul className="flex flex-col-reverse space-x-0 lg:space-x-6 lg:flex-row">
               {navigation.map((item, idx) => {
                 return (
-                  <li key={idx} className="text-gray-600 hover:text-indigo-600">
-                    <a href={item.path}>{item.title}</a>
+                  <li
+                    key={idx}
+                    className="text-gray-600 hover:text-indigo-600 cursor-pointer"
+                  >
+                    <a to={item.path}>{item.title}</a>
                   </li>
                 );
               })}

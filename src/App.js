@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/Dashboard";
 import Katalog from "./components/Page/Katalog";
 import HomeScreen from "./components/HomeScreen";
 import Login from "./components/Page/Login";
@@ -13,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="Login" element={<Login />} />
+        <Route path="Dashboard" element={<Dashboard />} />
         <Route path="Register" element={<Register />} />
         <Route path="Aqiqah" element={<Katalog />} />
       </Routes>
