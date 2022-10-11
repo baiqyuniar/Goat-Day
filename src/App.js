@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
-import Katalog from "./components/Page/Katalog";
+import Aqiqah from "./components/Page/Aqiqah";
 import HomeScreen from "./components/HomeScreen";
 import Login from "./components/Page/Login";
 import Register from "./components/Page/Register";
-import Footer from "./components/HomeScreen/Footer";
+import Qurban from "./components/Page/Qurban";
 
 const App = () => {
   return (
@@ -15,9 +15,9 @@ const App = () => {
         <Route path="Login" element={<Login />} />
         <Route path="Dashboard" element={<Dashboard />} />
         <Route path="Register" element={<Register />} />
-        <Route path="Aqiqah" element={<Katalog />} />
+        <Route path="Aqiqah" element={<Aqiqah />} />
+        <Route path="Qurban" element={<Qurban />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 };

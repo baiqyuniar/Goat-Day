@@ -24,7 +24,10 @@ const Mitra = () => {
   const [member, setMember] = useState(0);
 
   return (
-    <div className="relative mt-12 mx-auto py-10 w-full max-w-screen bg-white text-gray-700 lg:h-[65vh]">
+    <div
+      id="mitra"
+      className="relative mt-12 mx-auto py-10 w-full max-w-screen bg-white text-gray-700 lg:h-[65vh]"
+    >
       <div className="mb-4 flex justify-center items-center">
         <span className="h-1 w-14 rounded-3xl bg-gray-700" />
         <h2 className="px-3 text-xl lg:text-2xl text-gray-700 font-bold font-oswald uppercase tracking-wider">

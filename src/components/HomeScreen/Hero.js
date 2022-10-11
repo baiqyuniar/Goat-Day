@@ -52,7 +52,10 @@ const Hero = () => {
   };
 
   return (
-    <div className="px-4 lg:py-8 min-w-full py-16 w-full mx-auto lg:h-[96vh] sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div
+      id="hero"
+      className="px-4 lg:py-8 min-w-full py-16 w-full mx-auto lg:h-[96vh] sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
       <div className="lg:mt-32 lg:mx-12 flex flex-col items-center justify-between mt-20 lg:flex-row">
         <div className="lg:max-w-lg lg:pr-5 lg:mb-0">
           <div className="max-w-2xl">

@@ -3,7 +3,10 @@ import kambing from "../../assets/kambing.png";
 
 const Produk = () => {
   return (
-    <div className="relative mt-2 mx-auto w-full max-w-screen lg:h-[70vh]">
+    <div
+      id="produk"
+      className="relative mt-2 mx-auto w-full max-w-screen lg:h-[70vh]"
+    >
       <div className="mx-auto max-w-xl sm:max-w-2xl lg:max-w-none py-5 px-4 w-full">
         {/* :TITLE */}
         <div className="flex justify-center items-center">

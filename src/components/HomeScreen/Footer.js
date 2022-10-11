@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -87,25 +88,46 @@ const Footer = () => {
 
             <nav className="flex justify-around md:flex-col font-medium list-none">
               <li>
-                <a href="#link" className="hover:text-gray-200">
+                <Link
+                  to="hero"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  className="hover:text-gray-200 cursor-pointer"
+                >
                   Beranda
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="#link" className="hover:text-gray-200">
+                <Link
+                  to="produk"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  className="hover:text-gray-200 cursor-pointer"
+                >
                   Produk
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="#link" className="hover:text-gray-200">
+                <Link
+                  to="mitra"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  className="hover:text-gray-200 cursor-pointer"
+                >
                   Mitra
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="#link" className="hover:text-gray-200">
+                <a href="/Register" className="hover:text-gray-200">
                   Daftar
                 </a>
               </li>
@@ -137,7 +159,7 @@ const Footer = () => {
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
-              <a href="#email">goatday123@gmail.com</a>
+              <a href="https://mail.google.com/">goatday123@gmail.com</a>
             </p>
           </div>
 
@@ -161,7 +183,7 @@ const Footer = () => {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span>081-234-567-890</span>
+              <a href="https://wa.me/6281234567890">081-234-567-890</a>
             </p>
           </div>
         </div>

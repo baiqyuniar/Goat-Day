@@ -1,17 +1,11 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
   const navRef = useRef();
-
-  const navigation = [
-    { title: "Beranda", path: "/Beranda" },
-    { title: "Produk", path: "/Produk" },
-    { title: "Mitra", path: "/Mitra" },
-  ];
 
   useEffect(() => {
     const body = document.body;
@@ -81,23 +75,49 @@ const Navbar = () => {
         >
           <div>
             <ul className="flex flex-col-reverse space-x-0 lg:space-x-6 lg:flex-row">
-              {navigation.map((item, idx) => {
-                return (
-                  <li
-                    key={idx}
-                    className="text-gray-600 hover:text-indigo-600 cursor-pointer"
-                  >
-                    <a to={item.path}>{item.title}</a>
-                  </li>
-                );
-              })}
-              <li className="mt-8 lg:mt-0">
+              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
                 <Link
-                  to="/Login"
+                  to="hero"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  Beranda
+                </Link>
+              </li>
+
+              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
+                <Link
+                  to="produk"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  Produk
+                </Link>
+              </li>
+
+              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
+                <Link
+                  to="mitra"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  Mitra
+                </Link>
+              </li>
+
+              <li className="mt-8 lg:mt-0">
+                <a
+                  href="/Login"
                   className="py-3 px-4 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow block cursor-pointer lg:inline"
                 >
                   Masuk
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

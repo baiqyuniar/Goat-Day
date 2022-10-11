@@ -1,7 +1,7 @@
 import React from "react";
 import Kambing from "../../assets/kambing.png";
 
-const Katalog = () => {
+const Aqiqah = () => {
   const products = [
     {
       id: 1,
@@ -138,4 +138,4 @@ const Katalog = () => {
   );
 };
 
-export default Katalog;
+export default Aqiqah;
