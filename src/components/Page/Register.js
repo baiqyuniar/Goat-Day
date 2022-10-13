@@ -1,12 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
-import {
-  faCheck,
-  faTimes,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import Dashboard from "../Dashboard";
+import Login from "./Login";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -69,7 +65,7 @@ const Register = () => {
     <>
       {success ? (
         <section>
-          <Dashboard />
+          <Login />
         </section>
       ) : (
         <section className="h-screen bg-gray-100 bg-opacity-50 container flex items-center justify-center flex-1 h-full mx-auto">

@@ -28,7 +28,7 @@ const Navbar = () => {
     <nav ref={navRef} className="bg-white w-full top-0 z-20 lg:fixed">
       <div className="items-center px-4 max-w-screen-2xl mx-auto lg:flex lg:px-8 shadow-lg">
         <div className="flex items-center justify-between py-3 lg:block">
-          <img className="h-auto w-28" src={Logo} />
+          <img className="h-auto w-28" alt="Logo" src={Logo} />
 
           <div className="lg:hidden">
             <button

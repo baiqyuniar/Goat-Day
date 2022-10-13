@@ -81,7 +81,10 @@ const Mitra = () => {
           <p className="py-2 text-base">{partner[member].description}</p>
 
           <div className="mb-8 flex">
-            <a className="px-3 text-lg rounded-full lg:text-base text-white font-light font-oswald bg-sky-700 hover:tracking-wider cursor-pointer">
+            <a
+              href="https://wa.me/6281234567890"
+              className="px-3 text-lg rounded-full lg:text-base text-white font-light font-oswald bg-sky-700 hover:tracking-wider cursor-pointer"
+            >
               Hubungi kami
             </a>
           </div>

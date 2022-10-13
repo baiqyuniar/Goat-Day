@@ -29,7 +29,7 @@ const Produk = () => {
           >
             <div className="flex-shrink-0">
               <div className="flex items-center mx-auto justify-center h-16 w-16 rounded-md text-white">
-                <img className="h-12 w-12" src={kambing} />
+                <img className="h-12 w-12" alt="Kambing" src={kambing} />
               </div>
             </div>
             <h3 className="text-2xl sm:text-xl text-gray-700 font-semibold  py-4">
@@ -42,10 +42,13 @@ const Produk = () => {
             </p>
           </a>
 
-          <a className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 mt-6 sm:mt-16 md:mt-20 lg:mt-24 bg-white hover:cursor-pointer shadow-lg rounded-lg">
+          <a
+            href="/Qurban"
+            className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 mt-6 sm:mt-16 md:mt-20 lg:mt-24 bg-white hover:cursor-pointer shadow-lg rounded-lg"
+          >
             <div className="flex-shrink-0">
               <div className="flex items-center mx-auto justify-center h-16 w-16 rounded-md text-white">
-                <img className="h-12 w-12" src={kambing} />
+                <img className="h-12 w-12" alt="Kambing" src={kambing} />
               </div>
             </div>
             <h3 className="text-2xl sm:text-xl text-gray-700 font-semibold  py-4">
@@ -58,10 +61,13 @@ const Produk = () => {
             </p>
           </a>
 
-          <a className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 mt-6 px-4 py-4 bg-white shadow-lg rounded-lg hover:cursor-pointer">
+          <a
+            href="/Susu"
+            className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 mt-6 px-4 py-4 bg-white shadow-lg rounded-lg hover:cursor-pointer"
+          >
             <div className="flex-shrink-0">
               <div className="flex items-center mx-auto justify-center h-16 w-16 rounded-md text-white">
-                <img className="h-12 w-12" src={kambing} />
+                <img className="h-12 w-12" alt="Kambing" src={kambing} />
               </div>
             </div>
             <h3 className="text-2xl sm:text-xl text-gray-700 font-semibold  py-4">

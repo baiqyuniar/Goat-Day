@@ -6,6 +6,7 @@ import HomeScreen from "./components/HomeScreen";
 import Login from "./components/Page/Login";
 import Register from "./components/Page/Register";
 import Qurban from "./components/Page/Qurban";
+import SusuKambing from "./components/Page/SusuKambing";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="Register" element={<Register />} />
         <Route path="Aqiqah" element={<Aqiqah />} />
         <Route path="Qurban" element={<Qurban />} />
+        <Route path="Susu" element={<SusuKambing />} />
       </Routes>
     </BrowserRouter>
   );

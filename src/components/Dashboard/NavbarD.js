@@ -28,6 +28,7 @@ const ProfileDropDown = (props) => {
           <img
             src="https://lastfm.freetls.fastly.net/i/u/ar0/cda8a2406d8561e60d8d5cab2c46f57c"
             className="w-full h-full rounded-full"
+            alt="Profpict"
           />
         </button>
         <div className="lg:hidden z-20">
@@ -42,10 +43,10 @@ const ProfileDropDown = (props) => {
           state ? "" : "lg:hidden"
         }`}
       >
-        {navigation.map((item, idx) => (
+        {navigation.map((item, index) => (
           <li className="bg-white">
             <a
-              key={idx}
+              key={index}
               className="block text-gray-600 lg:hover:bg-gray-50 lg:p-2.5"
               href={item.path}
             >
@@ -88,8 +89,11 @@ export default () => {
                 }`}
               >
                 <ul className="mt-4 space-y-5 z-20 bg-white lg:hidden">
-                  {navigations.map((item, idx) => (
-                    <li key={idx} className="text-gray-600 hover:text-gray-900">
+                  {navigations.map((item, index) => (
+                    <li
+                      key={index}
+                      className="text-gray-600 hover:text-gray-900"
+                    >
                       <a href={item.path}>{item.title}</a>
                     </li>
                   ))}
