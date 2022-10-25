@@ -82,6 +82,7 @@ const Mitra = () => {
 
           <div className="mb-8 flex">
             <a
+              target="_blank"
               href="https://wa.me/6281234567890"
               className="px-3 text-lg rounded-full lg:text-base text-white font-light font-oswald bg-sky-700 hover:tracking-wider cursor-pointer"
             >

@@ -7,26 +7,9 @@ const Navbar = () => {
   const [state, setState] = useState(false);
   const navRef = useRef();
 
-  useEffect(() => {
-    const body = document.body;
-
-    // Disable scrolling
-    const customBodyStyle = ["overflow-hidden", "lg:overflow-visible"];
-    if (state) body.classList.add(...customBodyStyle);
-    // Enable scrolling
-    else body.classList.remove(...customBodyStyle);
-
-    // Sticky strick
-    const customStyle = ["sticky-nav", "fixed", "border-b"];
-    window.onscroll = () => {
-      if (window.scrollY > 100) navRef.current.classList.add(...customStyle);
-      else navRef.current.classList.remove(...customStyle);
-    };
-  }, [state]);
-
   return (
-    <nav ref={navRef} className="bg-white w-full top-0 z-20 lg:fixed">
-      <div className="items-center px-4 max-w-screen-2xl mx-auto lg:flex lg:px-8 shadow-lg">
+    <nav ref={navRef} className="bg-white w-full top-0 z-20 lg:fixed shadow-lg">
+      <div className="items-center px-4 max-w-screen-2xl mx-auto lg:flex lg:px-8">
         <div className="flex items-center justify-between py-3 lg:block">
           <img className="h-auto w-28" alt="Logo" src={Logo} />
 
