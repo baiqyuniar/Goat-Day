@@ -12,7 +12,11 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui"), [require("@tailwindcss/aspect-ratio")]],
+  plugins: [
+    require("@tailwindcss/line-clamp"),
+    require("daisyui"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 
   daisyui: {
     styled: true,

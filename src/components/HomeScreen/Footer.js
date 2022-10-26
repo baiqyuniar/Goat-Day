@@ -102,6 +102,32 @@ const Footer = () => {
 
               <li>
                 <Link
+                  to="mitra"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  className="hover:text-gray-200 cursor-pointer"
+                >
+                  Profil
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="mitra"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  className="hover:text-gray-200 cursor-pointer"
+                >
+                  Artikel
+                </Link>
+              </li>
+
+              <li>
+                <Link
                   to="produk"
                   spy={true}
                   smooth={true}
