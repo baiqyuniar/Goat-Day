@@ -1,5 +1,4 @@
 import React from "react";
-import { AiFillShopping } from "react-icons/ai";
 import Kambing from "../../assets/kambing.png";
 
 const Qurban = () => {
@@ -9,6 +8,7 @@ const Qurban = () => {
       name: "Kambing Apa?",
       price: 3500000,
       href: "#link",
+      description: "Umur 3 tahun",
       picture: Kambing,
       pictureAlt: "Picture description blabla",
     },
@@ -17,6 +17,7 @@ const Qurban = () => {
       name: "Kambing Apa?",
       price: 4000000,
       href: "#link",
+      description: "Umur 3 tahun",
       picture: Kambing,
       pictureAlt: "Picture description blabla",
     },
@@ -25,6 +26,7 @@ const Qurban = () => {
       name: "Kambing Apa?",
       price: 3750000,
       href: "#link",
+      description: "Umur 2 tahun",
       picture: Kambing,
       pictureAlt: "Picture description blabla",
     },
@@ -33,6 +35,7 @@ const Qurban = () => {
       name: "Kambing Apa?",
       price: 4225000,
       href: "#link",
+      description: "Umur 3 tahun",
       picture: Kambing,
       pictureAlt: "Picture description blabla",
     },
@@ -41,6 +44,7 @@ const Qurban = () => {
       name: "Kambing Apa?",
       price: 4500000,
       href: "#link",
+      description: "Umur 2,5 tahun",
       picture: Kambing,
       pictureAlt: "Picture description blabla",
     },
@@ -49,6 +53,7 @@ const Qurban = () => {
       name: "Kambing Apa?",
       price: 3864000,
       href: "#link",
+      description: "Umur 3 tahun",
       picture: Kambing,
       pictureAlt: "Picture description blabla",
     },
@@ -57,6 +62,7 @@ const Qurban = () => {
       name: "Kambing Apa?",
       price: 4567000,
       href: "#link",
+      description: "Umur 4 tahun",
       picture: Kambing,
       pictureAlt: "Picture description blabla",
     },
@@ -65,51 +71,57 @@ const Qurban = () => {
       name: "Kambing Apa?",
       price: 4728500,
       href: "#link",
+      description: "Umur 3 tahun",
       picture: Kambing,
       pictureAlt: "Picture description blabla",
     },
   ];
 
   return (
-    <div className="mx-auto py-8 px-4 sm:px-6 w-full max-w-7xl bg-white">
+    <div className="mx-auto py-8 px-4 sm:px-6 w-full max-w-7xl lg:max-w-screen-2xl bg-white">
       <div className="mx-auto max-w-xs sm:max-w-2xl lg:max-w-none">
-        {/* :CATEGORY TITLE */}
         <h2 className="text-2xl text-gray-700 uppercase text-center tracking-widest font-bold">
           Qurban
         </h2>
+
+        <div className="mt-6">
+          <ul className="grid grid-cols-4 gap-10">
+            {products.map((product) => (
+              <li
+                key={product.id}
+                className="col-span-full sm:col-span-2 lg:col-span-1 group relative"
+              >
+                <a href={product.href} className="w-full h-full flex flex-col">
+                  <div className="relative">
+                    <div className="aspect-w-1 aspect-h-1 shadow-sm rounded-lg overflow-hidden group-hover:shadow-md">
+                      <img
+                        src={product.picture}
+                        alt={product.pictureAlt}
+                        className="w-full h-full object-cover object-center"
+                      />
+                      <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-gray-800 via-transparent opacity-70 group-hover:from-transparent" />
+                    </div>
+                    <span className="z-20 absolute bottom-3 right-5 px-0.5 rounded-md text-2xl text-white font-semibold antialiased group-hover:text-gray-700 group-hover:bg-white group-hover:bg-opacity-70">{`Rp${product.price}`}</span>
+                  </div>
+                  <div className="flex-grow mt-2 px-3 h-full">
+                    <div className="relative flex flex-col">
+                      <h3 className="text-base text-gray-800 font-semibold">
+                        {product.name}
+                      </h3>
+                      <p className="mt-1 text-sm text-gray-500 font-medium">
+                        {product.description}
+                      </p>
+                      <button className="mt-4 py-1.5 w-full rounded-md bg-gray-200 text-sm text-gray-600 font-semibold tracking-wide hover:bg-gray-300 hover:text-gray-800">
+                        Tambahkan
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-
-      <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-5">
-        {products.map((product) => (
-          <li key={product.id} className="col-span-1 group">
-            <a href={product.href} className="flex sm:justify-center space-x-3">
-              {/* :PICTURE */}
-              <div className="flex-shrink-0 relative w-1/2 sm:w-2/5 h-44 sm:h-auto sm:min-h-full rounded-sm overflow-hidden filter brightness-95 group-hover:brightness-100">
-                <img
-                  src={product.picture}
-                  alt={product.pictureAlt}
-                  className="w-full h-full object-fill object-center"
-                />
-              </div>
-
-              {/* :PRODUCT DETAILS */}
-              <div className="flex flex-col">
-                {/* ::Name */}
-                <h3 className="text-base text-gray-700 font-semibold">
-                  {product.name}
-                </h3>
-                {/* ::Price */}
-                <p className="mt-1 mb-10 text-base text-gray-500 font-medium">{`$${product.price}`}</p>
-                {/* ::Add to Cart Button */}
-                <button className="mt-auto py-1.5 px-2 w-full inline-flex justify-between items-center rounded border-2 border-indigo-600 bg-white text-sm text-indigo-600 font-semibold tracking-wide whitespace-nowrap hover:bg-indigo-600 hover:text-white">
-                  Add to Cart
-                  <AiFillShopping className="ml-3 w-5 h-5" />
-                </button>
-              </div>
-            </a>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };

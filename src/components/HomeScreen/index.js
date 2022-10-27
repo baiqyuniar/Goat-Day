@@ -1,10 +1,10 @@
 import React from "react";
 import Footer from "./Footer";
-import Hero from "./Hero";
+import Hero from "./Hero/Hero";
 import Produk from "./Produk";
 import Mitra from "./Mitra";
 import Navbar from "./Navbar";
-import Artikel from "./Artikel";
+import Artikel from "./Artikel/Artikel";
 
 const HomeScreen = () => {
   return (

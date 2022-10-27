@@ -18,6 +18,10 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
   ],
 
+  scale: ["group-hover"],
+
+  translate: ["group-hover"],
+
   daisyui: {
     styled: true,
     themes: false,
