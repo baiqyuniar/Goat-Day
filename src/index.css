@@ -61,6 +61,17 @@
   }
 }
 
+@layer utilities {
+  .shadow-text5 {
+    text-shadow: -15px 5px 20px #ced0d3;
+  }
+  @variants hover {
+    .shadow-h-text5 {
+      text-shadow: -16px 6px 15px #ced0d3;
+    }
+  }
+}
+
 .sticky-nav {
   animation: sticky-nav 300ms;
 }

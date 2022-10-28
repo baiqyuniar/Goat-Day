@@ -1,82 +1,7 @@
 import React from "react";
-import Kambing from "../../assets/kambing.png";
+import listQurban from "./listQurban";
 
 const Qurban = () => {
-  const products = [
-    {
-      id: 1,
-      name: "Kambing Apa?",
-      price: 3500000,
-      href: "#link",
-      description: "Umur 3 tahun",
-      picture: Kambing,
-      pictureAlt: "Picture description blabla",
-    },
-    {
-      id: 2,
-      name: "Kambing Apa?",
-      price: 4000000,
-      href: "#link",
-      description: "Umur 3 tahun",
-      picture: Kambing,
-      pictureAlt: "Picture description blabla",
-    },
-    {
-      id: 3,
-      name: "Kambing Apa?",
-      price: 3750000,
-      href: "#link",
-      description: "Umur 2 tahun",
-      picture: Kambing,
-      pictureAlt: "Picture description blabla",
-    },
-    {
-      id: 4,
-      name: "Kambing Apa?",
-      price: 4225000,
-      href: "#link",
-      description: "Umur 3 tahun",
-      picture: Kambing,
-      pictureAlt: "Picture description blabla",
-    },
-    {
-      id: 5,
-      name: "Kambing Apa?",
-      price: 4500000,
-      href: "#link",
-      description: "Umur 2,5 tahun",
-      picture: Kambing,
-      pictureAlt: "Picture description blabla",
-    },
-    {
-      id: 6,
-      name: "Kambing Apa?",
-      price: 3864000,
-      href: "#link",
-      description: "Umur 3 tahun",
-      picture: Kambing,
-      pictureAlt: "Picture description blabla",
-    },
-    {
-      id: 7,
-      name: "Kambing Apa?",
-      price: 4567000,
-      href: "#link",
-      description: "Umur 4 tahun",
-      picture: Kambing,
-      pictureAlt: "Picture description blabla",
-    },
-    {
-      id: 8,
-      name: "Kambing Apa?",
-      price: 4728500,
-      href: "#link",
-      description: "Umur 3 tahun",
-      picture: Kambing,
-      pictureAlt: "Picture description blabla",
-    },
-  ];
-
   return (
     <div className="mx-auto py-8 px-4 sm:px-6 w-full max-w-7xl lg:max-w-screen-2xl bg-white">
       <div className="mx-auto max-w-xs sm:max-w-2xl lg:max-w-none">
@@ -86,7 +11,7 @@ const Qurban = () => {
 
         <div className="mt-6">
           <ul className="grid grid-cols-4 gap-10">
-            {products.map((product) => (
+            {listQurban.map((product) => (
               <li
                 key={product.id}
                 className="col-span-full sm:col-span-2 lg:col-span-1 group relative"

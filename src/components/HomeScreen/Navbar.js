@@ -71,20 +71,14 @@ const Navbar = () => {
               </li>
 
               <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-                <Link
-                  to=""
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                >
+                <a href="Profil" target="_blank">
                   Profil
-                </Link>
+                </a>
               </li>
 
               <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
                 <Link
-                  to=""
+                  to="artikel"
                   spy={true}
                   smooth={true}
                   offset={-100}

@@ -1,32 +1,13 @@
 import { React, useState } from "react";
+import mitraSlider from "./mitra-slider";
 
 const Mitra = () => {
-  const partner = [
-    {
-      firstname: "Luke",
-      lastname: "Cole",
-      role: "Peternak",
-      picture: "https://asianwiki.com/images/b/b5/Reply_1988-005.jpg",
-      description:
-        "Harum iusto exercitationem assumenda quas nostrum perspiciatis quos iste sit reprehenderit, libero quae aperiam sapiente delectus, porro tempore minus repellendus ratione distinctio!",
-    },
-    {
-      firstname: "Luke",
-      lastname: "Balmer",
-      role: "Investor",
-      picture:
-        "https://img.okezone.com/content/2020/05/19/33/2216196/jaehyun-nct-127-tulis-surat-permintaan-maaf-gara-gara-ke-bar-di-itaewon-fQIVosvqQX.jpg",
-      description:
-        "Harum iusto exercitationem assumenda quas nostrum perspiciatis quos iste sit reprehenderit, libero quae aperiam sapiente delectus, porro tempore minus repellendus ratione distinctio!",
-    },
-  ];
-
   const [member, setMember] = useState(0);
 
   return (
-    <div
+    <section
       id="mitra"
-      className="relative mt-12 mx-auto py-10 w-full max-w-screen bg-white text-gray-700 lg:h-[65vh]"
+      className="mt-4 px-4 lg:pt-16 min-w-full py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-lg md:px-24 lg:px-8 lg:mt-0"
     >
       <div className="mb-4 flex justify-center items-center">
         <span className="h-1 w-14 rounded-3xl bg-gray-700" />
@@ -39,7 +20,7 @@ const Mitra = () => {
       <div className="mx-auto px-4 w-full max-w-7xl grid grid-cols-2 gap-y-4 sm:gap-y-10 lg:my-14">
         <div className="col-span-full lg:col-span-1 flex flex-col sm:flex-row justify-center items-center">
           <ul className="mb-4 sm:mb-0 px-4 flex sm:flex-col justify-center items-center space-x-3 sm:space-x-0 sm:space-y-3">
-            {partner.map((person, index) => (
+            {mitraSlider.map((person, index) => (
               <li
                 key={person.lastname}
                 className={`w-12 h-12 rounded-full overflow-hidden filter ${
@@ -60,7 +41,7 @@ const Mitra = () => {
 
           <div className="rounded overflow-hidden">
             <img
-              src={partner[member].picture}
+              src={mitraSlider[member].picture}
               alt=""
               className="w-full max-w-xs object-cover"
             />
@@ -70,15 +51,15 @@ const Mitra = () => {
         {/* :DETAILS */}
         <div className="col-span-full lg:col-span-1 mx-auto lg:mx-2 max-w-xl flex flex-col justify-center space-y-4">
           <span className="font-bold uppercase tracking-wider">
-            {partner[member].role}
+            {mitraSlider[member].role}
           </span>
 
           <h3 className="text-4xl sm:text-5xl font-bold space-y-2">
-            <span className="block">{partner[member].firstname}</span>
-            <span className="block">{partner[member].lastname}</span>
+            <span className="block">{mitraSlider[member].firstname}</span>
+            <span className="block">{mitraSlider[member].lastname}</span>
           </h3>
 
-          <p className="py-2 text-base">{partner[member].description}</p>
+          <p className="py-2 text-base">{mitraSlider[member].description}</p>
 
           <div className="mb-8 flex">
             <a
@@ -91,7 +72,7 @@ const Mitra = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

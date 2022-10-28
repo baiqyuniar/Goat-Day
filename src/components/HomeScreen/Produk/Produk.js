@@ -1,48 +1,11 @@
 import React from "react";
+import produkList from "./produkList";
 
 const Produk = () => {
-  const data = [
-    {
-      href: "/Aqiqah",
-      produk: "Aqiqah",
-      deskripsi:
-        "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec.",
-      pict: require("../../assets/kambing.png"),
-    },
-    {
-      href: "/Qurban",
-      produk: "Qurban",
-      deskripsi:
-        "Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.",
-      pict: require("../../assets/kambing.png"),
-    },
-    {
-      href: "/SusuKambing",
-      produk: "Susu",
-      deskripsi:
-        "Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue, leo eget bibendum sodales, augue.",
-      pict: require("../../assets/kambing.png"),
-    },
-    {
-      href: "/Daging",
-      produk: "Daging",
-      deskripsi:
-        "Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat sit amet adipiscing",
-      pict: require("../../assets/kambing.png"),
-    },
-    {
-      href: "/Investasi",
-      produk: "Investasi",
-      deskripsi:
-        "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros.",
-      pict: require("../../assets/kambing.png"),
-    },
-  ];
-
   return (
-    <div
+    <section
       id="produk"
-      className="relative mt-2 mx-auto w-full max-w-screen lg:h-auto"
+      className="mt-4 px-4 lg:pt-16 min-w-full py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-lg md:px-24 lg:px-8 lg:mt-0"
     >
       <div className="mx-auto max-w-xl sm:max-w-2xl lg:max-w-none py-5 px-4 w-full">
         {/* :TITLE */}
@@ -64,7 +27,7 @@ const Produk = () => {
         {/* :PRODUCT SUGGESTION */}
 
         <div className="sm:flex flex-wrap  justify-center items-center text-center gap-8 lg:my-10">
-          {data.map((data) => (
+          {produkList.map((data) => (
             <a
               href={data.href}
               className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 mt-6 hover:cursor-pointer wrapper antialiased text-gray-900"
@@ -96,7 +59,7 @@ const Produk = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -11,9 +11,9 @@ const Hero = () => {
   };
 
   return (
-    <div
+    <section
       id="hero"
-      className="mt-4 px-4 lg:pt-16 min-w-full py-16 mx-auto lg:h-[75vh] sm:max-w-xl md:max-w-full lg:max-w-lg md:px-24 lg:px-8 lg:mt-24"
+      className="mt-4 px-4 lg:pt-16 min-w-full py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-lg md:px-24 lg:px-8 lg:mt-20"
     >
       <Fade {...props}>
         {sliderData.map((sliderData, index) => (
@@ -32,7 +32,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="relative lg:w-1/2">
+            <div className="relative  lg:w-1/2">
               <img
                 className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
                 src={sliderData.picture}
@@ -42,7 +42,7 @@ const Hero = () => {
           </div>
         ))}
       </Fade>
-    </div>
+    </section>
   );
 };
 
