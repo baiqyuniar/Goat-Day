@@ -26,11 +26,11 @@ const Produk = () => {
 
         {/* :PRODUCT SUGGESTION */}
 
-        <div className="sm:flex flex-wrap  justify-center items-center text-center gap-8 lg:my-10">
+        <div className="sm:flex flex-wrap justify-center items-center text-center gap-8 lg:my-10">
           {produkList.map((data) => (
             <a
               href={data.href}
-              className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 mt-6 hover:cursor-pointer wrapper antialiased text-gray-900"
+              className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 mt-6 hover:cursor-pointer wrapper bg-transparent antialiased text-gray-900"
             >
               <img
                 className="w-full bg-gray-200 object-cover object-center rounded-lg shadow-md"

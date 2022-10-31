@@ -16,7 +16,7 @@ const Aqiqah = () => {
               laki-laki dua kambing yang sama dan untuk perempuan satu kambing.”
               <br />
               <cite class="w-full py-8 mx-auto md:mt-0 -mt-2 text-lg font-semibold text-center text-gray-700 intro sm:max-w-3xl">
-                - Sanadnya Hasan, Hadits Riwayat Abu Dawud (2843), Nasa’I
+                - Sanadnya Hasan, Hadits Riwayat Abu Dawud (2843), Nasa'I
                 (7/162-163), Ahmad (2286, 3176) dan Abdurrazaq (4/330), dan
                 dishahihkan oleh al-Hakim (4/238) -
               </cite>
@@ -43,6 +43,9 @@ const Aqiqah = () => {
                 mus.
               </p>
               <div className="mt-4 flex">
+                <span className="px-3 mr-auto ml-auto text-lg lg:text-base font-semibold font-oswald">
+                  Rp.xxxxxx
+                </span>
                 <a
                   target="_blank"
                   href="https://wa.me/6281234567890"
@@ -80,6 +83,9 @@ const Aqiqah = () => {
                 >
                   Pesan
                 </a>
+                <span className="px-3 mr-auto ml-auto text-lg lg:text-base font-semibold font-oswald">
+                  Rp.xxxxxx
+                </span>
               </div>
             </div>
           </div>
@@ -104,6 +110,9 @@ const Aqiqah = () => {
               </p>
 
               <div className="mt-4 flex">
+                <span className="px-3 mr-auto ml-auto text-lg lg:text-base font-semibold font-oswald">
+                  Rp.xxxxxx
+                </span>
                 <a
                   target="_blank"
                   href="https://wa.me/6281234567890"
@@ -142,6 +151,9 @@ const Aqiqah = () => {
                 >
                   Pesan
                 </a>
+                <span className="px-3 mr-auto ml-auto text-lg lg:text-base font-semibold font-oswald">
+                  Rp.xxxxxx
+                </span>
               </div>
             </div>
           </div>

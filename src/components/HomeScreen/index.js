@@ -10,10 +10,12 @@ const HomeScreen = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <Artikel />
-      <Produk />
-      <Mitra />
+      <div className="mx-auto py-8 lg:py-0 px-4 sm:px-6 w-full max-w-7xl lg:max-w-screen-xl">
+        <Hero />
+        <Artikel />
+        <Produk />
+        <Mitra />
+      </div>
       <Footer />
     </div>
   );

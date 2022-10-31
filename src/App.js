@@ -7,7 +7,7 @@ import Login from "./components/Page/Login";
 import Register from "./components/Page/Register";
 import Qurban from "./components/Page/Qurban/Qurban";
 import SusuKambing from "./components/Page/Susu/SusuKambing";
-import Profil from "./components/Page/Profil";
+import Profil from "./components/Page/Profil/index";
 import DagingKambing from "./components/Page/Daging/DagingKambing";
 
 const App = () => {

@@ -1,9 +1,8 @@
 import React from "react";
 import { useRef, useState } from "react";
-import Logo from "../../assets/Logo.png";
-import { Link } from "react-scroll";
+import Logo from "../../../assets/Logo.png";
 
-const Navbar = () => {
+const NavbarP = () => {
   const [state, setState] = useState(false);
   const navRef = useRef();
 
@@ -59,15 +58,7 @@ const Navbar = () => {
           <div>
             <ul className="flex flex-col-reverse space-x-0 lg:space-x-6 lg:flex-row">
               <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-                <Link
-                  to="hero"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                >
-                  Beranda
-                </Link>
+                <a href="/">Beranda</a>
               </li>
 
               <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
@@ -75,39 +66,15 @@ const Navbar = () => {
               </li>
 
               <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-                <Link
-                  to="artikel"
-                  spy={true}
-                  smooth={true}
-                  offset={-75}
-                  duration={500}
-                >
-                  Artikel
-                </Link>
+                <a href="/">Artikel</a>
               </li>
 
               <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-                <Link
-                  to="produk"
-                  spy={true}
-                  smooth={true}
-                  offset={-50}
-                  duration={500}
-                >
-                  Produk
-                </Link>
+                <a href="/">Produk</a>
               </li>
 
               <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-                <Link
-                  to="mitra"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                >
-                  Mitra
-                </Link>
+                <a href="/">Mitra</a>
               </li>
 
               <li className="mt-8 lg:mt-0">
@@ -126,4 +93,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarP;
