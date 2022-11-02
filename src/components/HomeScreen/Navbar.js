@@ -58,7 +58,7 @@ const Navbar = () => {
         >
           <div>
             <ul className="flex flex-col-reverse space-x-0 lg:space-x-6 lg:flex-row">
-              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
+              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center">
                 <Link
                   to="hero"
                   spy={true}
@@ -70,11 +70,11 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
+              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center">
                 <a href="Profil">Profil</a>
               </li>
 
-              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
+              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center">
                 <Link
                   to="artikel"
                   spy={true}
@@ -86,7 +86,7 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
+              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center">
                 <Link
                   to="produk"
                   spy={true}
@@ -98,7 +98,7 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
+              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 ">
                 <Link
                   to="mitra"
                   spy={true}

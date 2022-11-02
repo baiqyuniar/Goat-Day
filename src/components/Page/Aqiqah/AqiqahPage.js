@@ -1,10 +1,10 @@
 import React from "react";
 
-const Aqiqah = () => {
+const AqiqahPage = () => {
   return (
     <section className="mx-auto py-8 lg:py-0 px-4 sm:px-6 w-full max-w-7xl lg:max-w-screen-xl bg-white">
       <div class="py-20 lg:py-8 md:py-12 bg-white">
-        <div class="flex flex-col px-8 mx-auto space-y-8 max-w-7xl xl:px-12">
+        <div class="flex flex-col px-8 mx-auto space-y-8 max-w-7xl xl:px-12 mt-24">
           <div class="relative">
             <h1 class="w-full uppercase text-3xl font-bold text-center sm:text-4xl md:text-5xl lg:mb-8">
               Aqiqah
@@ -163,4 +163,4 @@ const Aqiqah = () => {
   );
 };
 
-export default Aqiqah;
+export default AqiqahPage;

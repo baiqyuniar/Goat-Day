@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
-import Aqiqah from "./components/Page/Aqiqah/Aqiqah";
+import Aqiqah from "./components/Page/Aqiqah/index";
 import HomeScreen from "./components/HomeScreen";
 import Login from "./components/Page/Login";
 import Register from "./components/Page/Register";
-import Qurban from "./components/Page/Qurban/Qurban";
-import SusuKambing from "./components/Page/Susu/SusuKambing";
+import Qurban from "./components/Page/Qurban/index";
+import SusuKambing from "./components/Page/Susu/index";
 import Profil from "./components/Page/Profil/index";
-import DagingKambing from "./components/Page/Daging/DagingKambing";
+import DagingKambing from "./components/Page/Daging/index";
 
 const App = () => {
   return (

@@ -1,15 +1,15 @@
 import React from "react";
 import listQurban from "./listQurban";
 
-const Qurban = () => {
+const QurbanPage = () => {
   return (
     <div className="mx-auto py-8 px-4 sm:px-6 w-full max-w-7xl lg:max-w-screen-2xl bg-white">
-      <div className="mx-auto max-w-xs sm:max-w-2xl lg:max-w-none">
+      <div className="mx-auto max-w-xs sm:max-w-2xl lg:max-w-none lg:mt-20">
         <h2 className="text-2xl text-gray-700 uppercase text-center tracking-widest font-bold">
           Qurban
         </h2>
 
-        <div className="mt-6">
+        <div className="mt-16">
           <ul className="grid grid-cols-4 gap-10">
             {listQurban.map((product) => (
               <li
@@ -51,4 +51,4 @@ const Qurban = () => {
   );
 };
 
-export default Qurban;
+export default QurbanPage;
