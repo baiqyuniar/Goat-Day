@@ -9,6 +9,7 @@ import Qurban from "./components/Page/Qurban/index";
 import SusuKambing from "./components/Page/Susu/index";
 import Profil from "./components/Page/Profil/index";
 import DagingKambing from "./components/Page/Daging/index";
+import DaftarMitra from "./components/Page/DaftarMitra";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="Qurban" element={<Qurban />} />
         <Route path="Susu" element={<SusuKambing />} />
         <Route path="Daging" element={<DagingKambing />} />
+        <Route path="Mitra" element={<DaftarMitra />} />
       </Routes>
     </BrowserRouter>
   );

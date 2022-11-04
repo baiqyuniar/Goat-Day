@@ -26,7 +26,7 @@ const Produk = () => {
 
         {/* :PRODUCT SUGGESTION */}
 
-        <div className="sm:flex flex-wrap justify-center items-center text-center gap-8 lg:my-10">
+        <div className="sm:flex flex-wrap justify-center items-center text-center gap-8 lg:gap-12 lg:my-10">
           {produkList.map((data) => (
             <a
               href={data.href}

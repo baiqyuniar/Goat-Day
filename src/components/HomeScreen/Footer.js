@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-5 sm:py-10 px-4 bg-gray-800 lg:h-[50vh]">
+    <footer className="w-full py-5 sm:py-10 px-4 bg-gray-800 lg:h-auto lg:mt-3">
       <h2 className="sr-only">Footer</h2>
       <div className="flex flex-col-reverse sm:flex-row md:justify-between lg:justify-around">
         <div className="relative mt-14 sm:mt-0 px-5 flex flex-col justify-center items-center text-white">
