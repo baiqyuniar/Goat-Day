@@ -98,7 +98,7 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 ">
+              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center ">
                 <Link
                   to="mitra"
                   spy={true}

@@ -52,40 +52,48 @@ const NavbarP = () => {
 
         <div
           className={`flex-1 justify-between flex-row-reverse lg:overflow-visible lg:flex lg:pb-0 lg:pr-0 lg:h-auto ${
-            state ? "h-screen pb-20 overflow-auto pr-4" : "hidden"
+            state ? "h-auto pb-20 overflow-auto pr-4" : "hidden"
           }`}
         >
           <div>
-            <ul className="flex flex-col-reverse space-x-0 lg:space-x-6 lg:flex-row">
-              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-                <a href="/">Beranda</a>
-              </li>
+            <div className="flex flex-col space-x-0 lg:space-x-6 lg:flex-row">
+              <a
+                href="/"
+                className="text-gray-600 hover:text-indigo-600 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center"
+              >
+                Beranda
+              </a>
 
-              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-                <a href="Profil">Profil</a>
-              </li>
+              <a
+                href="/"
+                className="text-gray-600 hover:text-indigo-600 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center"
+              >
+                Artikel
+              </a>
 
-              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-                <a href="/">Artikel</a>
-              </li>
+              <a
+                href="/"
+                className="text-gray-600 hover:text-indigo-600 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center"
+              >
+                Produk
+              </a>
 
-              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-                <a href="/">Produk</a>
-              </li>
+              <a
+                href="/"
+                className="text-gray-600 hover:text-indigo-600 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center "
+              >
+                Mitra
+              </a>
 
-              <li className="text-gray-600 hover:text-indigo-600 cursor-pointer">
-                <a href="/">Mitra</a>
-              </li>
-
-              <li className="mt-8 lg:mt-0">
+              <div className="mt-8 lg:mt-0">
                 <a
                   href="/Login"
                   className="py-3 px-4 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow block cursor-pointer lg:inline"
                 >
                   Masuk
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

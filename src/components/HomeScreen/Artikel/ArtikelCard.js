@@ -17,11 +17,11 @@ const ArtikelCard = () => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-      {posts.map((post) => {
+      {posts.map((post, id) => {
         return (
           <div
             className="group flex cursor-pointer flex-col h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-lg"
-            key={post.id}
+            key={id}
           >
             <div className="relative w-full overflow-hidden">
               <img

@@ -27,8 +27,9 @@ const Produk = () => {
         {/* :PRODUCT SUGGESTION */}
 
         <div className="sm:flex flex-wrap justify-center items-center text-center gap-8 lg:gap-12 lg:my-10">
-          {produkList.map((data) => (
+          {produkList.map((data, key) => (
             <a
+              key={key}
               href={data.href}
               className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 mt-6 hover:cursor-pointer wrapper bg-transparent antialiased text-gray-900"
             >
@@ -38,18 +39,18 @@ const Produk = () => {
                 src={data.pict}
               />
 
-              <div class="relative px-4 -mt-16 ">
-                <div class="bg-white p-6 rounded-lg shadow-lg shadow-blue-500/50 shadow-lg">
-                  <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">
+              <div className="relative px-4 -mt-16 ">
+                <div className="bg-white p-6 rounded-lg shadow-lg shadow-blue-500/50 shadow-lg">
+                  <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">
                     {data.produk}
                   </h4>
 
-                  <div class="mt-1">
-                    <p class="text-gray-600 text-sm">{data.deskripsi}</p>
+                  <div className="mt-1">
+                    <p className="text-gray-600 text-sm">{data.deskripsi}</p>
                   </div>
 
-                  <div class="mt-4">
-                    <span class="text-teal-600 text-md font-semibold">
+                  <div className="mt-4">
+                    <span className="text-teal-600 text-md font-semibold">
                       Lihat katalog{" "}
                     </span>
                   </div>
