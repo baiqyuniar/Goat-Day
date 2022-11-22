@@ -1,14 +1,14 @@
-import React from "react";
-import { useRef, useState } from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/Logo.png";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
-  const navRef = useRef();
+  const navigate = useNavigate();
 
   return (
-    <nav ref={navRef} className="w-full top-0 z-20 lg:fixed shadow-lg bg-white">
+    <nav className="w-full top-0 z-20 lg:fixed shadow-lg bg-white">
       <div className="items-center px-4 max-w-screen-xl mx-auto lg:flex lg:px-8">
         <div className="flex items-center justify-between py-3 lg:block">
           <img className="h-auto w-28" alt="Logo" src={Logo} />
@@ -112,7 +112,7 @@ const Navbar = () => {
 
               <li className="mt-8 lg:mt-0">
                 <a
-                  href="/Login"
+                  onClick={() => navigate("/login")}
                   className="py-3 px-4 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow block cursor-pointer lg:inline"
                 >
                   Masuk

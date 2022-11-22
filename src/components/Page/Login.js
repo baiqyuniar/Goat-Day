@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Logo from "../../assets/Logo.png";
-import Dashboard from "../Dashboard";
+import Dashboard from "../DashboardPage/index";
 import axios from "axios";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [open, setOpen] = useState(false);
@@ -14,10 +15,12 @@ const Login = () => {
   const userRef = useRef();
   const errRef = useRef();
 
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
+
+  const registration = useNavigate();
 
   useEffect(() => {
     userRef.current.focus();
@@ -25,35 +28,21 @@ const Login = () => {
 
   useEffect(() => {
     setErrMsg("");
-  }, [username, password]);
+  }, [email, password]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "https://dummyjson.com/auth/login",
-        JSON.stringify({ username, password }),
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      console.log(JSON.stringify(response?.data));
-
-      setUsername("");
-      setPassword("");
+      await axios.post("https://apigoatday.dekakrens.my.id/login", {
+        email: email,
+        password: password,
+      });
       setSuccess(true);
-    } catch (err) {
-      if (!err?.response) {
-        setErrMsg("No Server Response");
-      } else if (err.response?.status === 400) {
-        setErrMsg("Missing Username or Password");
-      } else if (err.response?.status === 401) {
-        setErrMsg("Unauthorized");
-      } else {
-        setErrMsg("Login Failed");
+    } catch (error) {
+      if (error.response) {
+        setErrMsg(error.response.data.errMsg);
       }
-      errRef.current.focus();
     }
   };
 
@@ -61,7 +50,7 @@ const Login = () => {
     <>
       {success ? (
         <section>
-          <Dashboard />
+          <Outlet />
         </section>
       ) : (
         <div className="w-full h-screen font-sans bg-white">
@@ -95,8 +84,8 @@ const Login = () => {
                         id="username"
                         ref={userRef}
                         autoComplete="off"
-                        onChange={(e) => setUsername(e.target.value)}
-                        value={username}
+                        onChange={(e) => setEmail(e.target.value)}
+                        value={email}
                         required
                         className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-sky-600 focus:border-transparent"
                         placeholder="username"
@@ -136,7 +125,7 @@ const Login = () => {
                       Tidak punya akun?
                     </span>
                     <a
-                      href="Register"
+                      onClick={() => registration("/register")}
                       className="ml-1 inline-block text-sm font-semibold align-baseline text-500 hover:text-blue-800 cursor-pointer"
                     >
                       Buat akun

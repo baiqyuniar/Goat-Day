@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import produkList from "./produkList";
 
 const Produk = () => {
+  const nav = useNavigate();
   return (
     <section
       id="produk"
@@ -30,7 +32,7 @@ const Produk = () => {
           {produkList.map((data, key) => (
             <a
               key={key}
-              href={data.href}
+              onClick={() => nav(data.href)}
               className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 mt-6 hover:cursor-pointer wrapper bg-transparent antialiased text-gray-900"
             >
               <img

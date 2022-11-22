@@ -1,30 +1,109 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
-import Aqiqah from "./components/Page/Aqiqah/index";
-import HomeScreen from "./components/HomeScreen";
-import Login from "./components/Page/Login";
-import Register from "./components/Page/Register";
-import Qurban from "./components/Page/Qurban/index";
-import SusuKambing from "./components/Page/Susu/index";
-import Profil from "./components/Page/Profil/index";
-import DagingKambing from "./components/Page/Daging/index";
-import DaftarMitra from "./components/Page/DaftarMitra";
+import { RestrictedPage } from "./components/Page/RestrictedPage";
+
+const HomeScreen = lazy(() => import("./components/HomeScreen"));
+const Login = lazy(() => import("./components/Page/Login"));
+const Register = lazy(() => import("./components/Page/Register"));
+const Profil = lazy(() => import("./components/Page/Profil/index"));
+const DaftarMitra = lazy(() => import("./components/Page/DaftarMitra"));
+
+const Dashboard = lazy(() => import("./components/DashboardPage/index"));
+const Aqiqah = lazy(() => import("./components/Page/Aqiqah/index"));
+const Qurban = lazy(() => import("./components/Page/Qurban/index"));
+const SusuKambing = lazy(() => import("./components/Page/Susu/index"));
+const DagingKambing = lazy(() => import("./components/Page/Daging/index"));
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="Login" element={<Login />} />
-        <Route path="Register" element={<Register />} />
-        <Route path="Dashboard" element={<Dashboard />} />
-        <Route path="Profil" element={<Profil />} />
-        <Route path="Aqiqah" element={<Aqiqah />} />
-        <Route path="Qurban" element={<Qurban />} />
-        <Route path="Susu" element={<SusuKambing />} />
-        <Route path="Daging" element={<DagingKambing />} />
-        <Route path="Mitra" element={<DaftarMitra />} />
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={false}>
+              <HomeScreen />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <Suspense fallback={false}>
+              <Login />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <Suspense fallback={false}>
+              <Register />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="/profil"
+          element={
+            <Suspense fallback={false}>
+              <Profil />
+            </Suspense>
+          }
+        />
+
+        <Route element={<RestrictedPage />}>
+          <Route
+            path="/mitra"
+            element={
+              <Suspense fallback={false}>
+                <DaftarMitra />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="/dashboard"
+            element={
+              <Suspense fallback={false}>
+                <Dashboard />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="/aqiqah"
+            element={
+              <Suspense fallback={false}>
+                <Aqiqah />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/qurban"
+            element={
+              <Suspense fallback={false}>
+                <Qurban />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/susu"
+            element={
+              <Suspense fallback={false}>
+                <SusuKambing />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/daging"
+            element={
+              <Suspense fallback={false}>
+                <DagingKambing />
+              </Suspense>
+            }
+          />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

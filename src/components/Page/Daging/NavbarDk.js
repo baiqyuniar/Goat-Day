@@ -1,19 +1,17 @@
 import React from "react";
 import Logo from "../../../assets/Logo.png";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NavbarDk = () => {
   const [state, setState] = useState(false);
-  const navRef = useRef();
+  const navigate = useNavigate();
 
   return (
-    <nav
-      ref={navRef}
-      className="w-full top-0 z-20 lg:fixed shadow-lg border-b-2 bg-white"
-    >
+    <nav className="w-full top-0 z-20 lg:fixed shadow-lg border-b-2 bg-white">
       <div className="items-center px-4 max-w-screen-xl mx-auto lg:flex lg:px-8">
         <div className="flex items-center justify-end py-3 h-16 lg:block">
-          <a href="/">
+          <a onClick={() => navigate("/")}>
             <img className="h-auto w-28" alt="Logo" src={Logo} />
           </a>
           <div className="lg:hidden">
@@ -62,21 +60,21 @@ const NavbarDk = () => {
           <div>
             <div className="flex flex-col-reverse space-x-0 lg:space-x-6 lg:flex-row lg:gap-4">
               <a
-                href="/Aqiqah"
+                onClick={() => navigate("/aqiqah")}
                 className="text-gray-600 hover:bg-gradient-to-tr from-[#6e3cbc] to-[#4f46e5] hover:text-white hover:rounded-lg lg:p-4 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center"
               >
                 Aqiqah
               </a>
 
               <a
-                href="/Qurban"
+                onClick={() => navigate("/qurban")}
                 className="text-gray-600 hover:bg-gradient-to-tr from-[#6e3cbc] to-[#4f46e5] hover:text-white hover:rounded-lg lg:p-4 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center"
               >
                 Qurban
               </a>
 
               <a
-                href="/Susu"
+                onClick={() => navigate("/susu")}
                 className="text-gray-600 hover:bg-gradient-to-tr from-[#6E3CBC] to-[#4f46e5] hover:text-white hover:rounded-lg lg:p-4 cursor-pointer mt-4 mb-4 lg:mt-0 lg:mb-0 text-center"
               >
                 Susu Kambing
