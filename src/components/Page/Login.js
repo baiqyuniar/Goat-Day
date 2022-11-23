@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Logo from "../../assets/Logo.png";
-import Dashboard from "../DashboardPage/index";
 import axios from "axios";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Dashboard from "../DashboardPage";
 
 const Login = () => {
   const [open, setOpen] = useState(false);
@@ -34,10 +34,15 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      await axios.post("https://apigoatday.dekakrens.my.id/login", {
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://apigoatday.dekakrens.my.id/login",
+        {
+          email: email,
+          password: password,
+        }
+      );
+      // Cookies.set("accessToken", response.data.accessToken);
+      localStorage.setItem("accessToken", response.data.accessToken);
       setSuccess(true);
     } catch (error) {
       if (error.response) {
@@ -50,7 +55,7 @@ const Login = () => {
     <>
       {success ? (
         <section>
-          <Outlet />
+          <Dashboard />
         </section>
       ) : (
         <div className="w-full h-screen font-sans bg-white">

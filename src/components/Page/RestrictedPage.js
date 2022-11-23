@@ -1,14 +1,14 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import Dashboard from "../DashboardPage/index";
 import Login from "./Login";
 
 const Auth = () => {
   if (localStorage.getItem("accessToken")) {
-    return true;
+    return false;
   }
 };
 
 export const RestrictedPage = () => {
   const isAuth = Auth();
-  return isAuth ? <Outlet /> : <Login />;
+  return isAuth ? <Dashboard /> : <Login />;
 };

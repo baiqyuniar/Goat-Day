@@ -14,6 +14,8 @@ const Qurban = lazy(() => import("./components/Page/Qurban/index"));
 const SusuKambing = lazy(() => import("./components/Page/Susu/index"));
 const DagingKambing = lazy(() => import("./components/Page/Daging/index"));
 
+const DashboardUser = lazy(() => import("./components/DashboardUser/index"));
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -44,6 +46,15 @@ const App = () => {
         />
 
         <Route
+          path="/peternak"
+          element={
+            <Suspense fallback={false}>
+              <DashboardUser />
+            </Suspense>
+          }
+        />
+
+        <Route
           path="/profil"
           element={
             <Suspense fallback={false}>
@@ -52,16 +63,15 @@ const App = () => {
           }
         />
 
+        <Route
+          path="/mitra"
+          element={
+            <Suspense fallback={false}>
+              <DaftarMitra />
+            </Suspense>
+          }
+        />
         <Route element={<RestrictedPage />}>
-          <Route
-            path="/mitra"
-            element={
-              <Suspense fallback={false}>
-                <DaftarMitra />
-              </Suspense>
-            }
-          />
-
           <Route
             path="/dashboard"
             element={
@@ -70,40 +80,40 @@ const App = () => {
               </Suspense>
             }
           />
-
-          <Route
-            path="/aqiqah"
-            element={
-              <Suspense fallback={false}>
-                <Aqiqah />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/qurban"
-            element={
-              <Suspense fallback={false}>
-                <Qurban />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/susu"
-            element={
-              <Suspense fallback={false}>
-                <SusuKambing />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/daging"
-            element={
-              <Suspense fallback={false}>
-                <DagingKambing />
-              </Suspense>
-            }
-          />
         </Route>
+
+        <Route
+          path="/aqiqah"
+          element={
+            <Suspense fallback={false}>
+              <Aqiqah />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/qurban"
+          element={
+            <Suspense fallback={false}>
+              <Qurban />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/susu"
+          element={
+            <Suspense fallback={false}>
+              <SusuKambing />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/daging"
+          element={
+            <Suspense fallback={false}>
+              <DagingKambing />
+            </Suspense>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
