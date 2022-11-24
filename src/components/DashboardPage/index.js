@@ -7,18 +7,7 @@ import axiosJWT from "../../api/axios";
 
 const Dashboard = () => {
   const getUser = async () => {
-    let accessToken = localStorage.getItem("accessToken")
-      ? localStorage.getItem("accessToken")
-      : null;
-
-    const response = await axiosJWT.get(
-      "https://apigoatday.dekakrens.my.id/users",
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      }
-    );
+    const response = await axiosJWT.get("/users");
     console.log(response.data);
   };
 
@@ -27,7 +16,7 @@ const Dashboard = () => {
       <NavbarD />
       <Sidebar />
       <button
-        onClick={getUser}
+        onClick={() => getUser()}
         className="bg-indigo-400 text-white ml-96 w-20 h-12 rounded-lg"
       >
         Get users

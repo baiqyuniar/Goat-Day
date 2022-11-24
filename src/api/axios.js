@@ -1,34 +1,35 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
+import dayjs from "dayjs";
 
 const baseURL = "https://apigoatday.dekakrens.my.id";
+// const baseURL = "http://localhost:5000";
 let accessToken = localStorage.getItem("accessToken")
   ? localStorage.getItem("accessToken")
   : null;
 
 const axiosJWT = axios.create({
+  withCredentials: true,
   baseURL,
 });
 
-const refreshToken = async () => {
-  try {
-    await axios.get(`${baseURL}/token`, { accessToken: accessToken });
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 axiosJWT.interceptors.request.use(
-  async (config) => {
+  async (req) => {
     accessToken = localStorage.getItem("accessToken");
-    let currentDate = new Date();
-    const expDate = jwtDecode(accessToken);
 
-    if (expDate * 1000 < currentDate.getTime()) {
-      await refreshToken();
-      config.headers.Authorization = `Bearer ${accessToken}`;
+    const decodedJWT = jwtDecode(accessToken);
+    const isExpired = dayjs.unix(decodedJWT.exp).diff(dayjs()) < 1;
+
+    if (!isExpired) {
+      req.headers.Authorization = `Bearer ${accessToken}`;
+      return req;
     }
-    return config;
+
+    await axios.get(`${baseURL}/token`).then((res) => {
+      localStorage.setItem("accessToken", res.data?.accessToken);
+      req.headers.Authorization = `Bearer ${res.data?.accessToken}`;
+      return req;
+    });
   },
   (error) => {
     return Promise.reject(error);
