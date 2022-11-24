@@ -14,7 +14,12 @@ const Qurban = lazy(() => import("./components/Page/Qurban/index"));
 const SusuKambing = lazy(() => import("./components/Page/Susu/index"));
 const DagingKambing = lazy(() => import("./components/Page/Daging/index"));
 
-const DashboardUser = lazy(() => import("./components/DashboardUser/index"));
+const BakalanMenu = lazy(() =>
+  import("./components/DashboardUser/Bakalan/index")
+);
+const Treatment = lazy(() =>
+  import("./components/DashboardUser/Perawatan/index")
+);
 
 const App = () => {
   return (
@@ -49,7 +54,16 @@ const App = () => {
           path="/peternak"
           element={
             <Suspense fallback={false}>
-              <DashboardUser />
+              <BakalanMenu />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="/perawatan"
+          element={
+            <Suspense fallback={false}>
+              <Treatment />
             </Suspense>
           }
         />

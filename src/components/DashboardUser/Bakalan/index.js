@@ -1,10 +1,10 @@
 import React from "react";
-import NavbarU from "./NavbarU";
-import SidebarU from "./SidebarU";
+import NavbarU from "../NavbarU";
+import SidebarU from "../SidebarU";
 import Bakalan from "./Bakalan";
 import Info from "./Info";
 
-const DashboardUser = () => {
+const BakalanMenu = () => {
   return (
     <div className="w-screen">
       <NavbarU />
@@ -15,4 +15,4 @@ const DashboardUser = () => {
   );
 };
 
-export default DashboardUser;
+export default BakalanMenu;

@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 
-// Profile Dropdown
 const ProfileDropDown = (props) => {
   const [state, setState] = useState(false);
   const profileRef = useRef();
@@ -89,16 +88,16 @@ export default () => {
                 }`}
               >
                 <ul className="mt-4 space-y-5 z-20 bg-white lg:hidden">
-                  {navigations.map((item, index) => (
+                  {navigations.map((item, path) => (
                     <li
-                      key={index}
+                      key={path}
                       className="text-gray-600 hover:text-gray-900"
                     >
                       <a href={item.path}>{item.title}</a>
                     </li>
                   ))}
                 </ul>
-                <ProfileDropDown class="mt-5 pt-5 border-t lg:hidden" />
+                <ProfileDropDown className="mt-5 pt-5 border-t lg:hidden" />
               </div>
 
               <div className="flex-1 flex items-center justify-end space-x-2 sm:space-x-6">

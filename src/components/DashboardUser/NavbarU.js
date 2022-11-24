@@ -6,8 +6,8 @@ const ProfileDropDown = (props) => {
   const profileRef = useRef();
 
   const navigation = [
-    { title: "Settings", path: "./" },
-    { title: "Log out", path: "./" },
+    { title: "Settings", path: "#" },
+    { title: "Logout", path: "/" },
   ];
 
   useEffect(() => {
@@ -32,10 +32,8 @@ const ProfileDropDown = (props) => {
           />
         </button>
         <div className="lg:hidden z-20">
-          <span className="block">Taylor Swift</span>
-          <span className="block text-sm text-gray-500">
-            swifties@gmail.com
-          </span>
+          <span className="block">Username</span>
+          <span className="block text-sm text-gray-500">email@gmail.com</span>
         </div>
       </div>
       <ul
@@ -63,11 +61,10 @@ export default () => {
   const [menuState, setMenuState] = useState(false);
 
   const navigations = [
-    { title: "Dashboard", path: "./" },
-    { title: "Categories", path: "./" },
-    { title: "Report", path: "./" },
-    { title: "Other data", path: "./" },
-    { title: "Finance", path: "./" },
+    { title: "Bakalan", path: "/peternak" },
+    { title: "Perawatan", path: "/perawatan" },
+    { title: "Kondisi", path: "/peternak" },
+    { title: "Panen", path: "/peternak" },
   ];
 
   return (
@@ -98,7 +95,7 @@ export default () => {
                     </li>
                   ))}
                 </ul>
-                <ProfileDropDown class="mt-5 pt-5 border-t lg:hidden" />
+                <ProfileDropDown className="mt-5 pt-5 border-t lg:hidden" />
               </div>
 
               <div className="flex-1 flex items-center justify-end space-x-2 sm:space-x-6">

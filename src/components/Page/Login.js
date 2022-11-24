@@ -3,7 +3,7 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Logo from "../../assets/Logo.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Dashboard from "../DashboardPage";
+import Dashboard from "../DashboardPage/index";
 
 const Login = () => {
   const [open, setOpen] = useState(false);

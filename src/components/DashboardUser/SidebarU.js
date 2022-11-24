@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const SidebarU = () => {
+  const navigate = useNavigate();
   return (
     <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
       <div>
@@ -16,11 +18,11 @@ const SidebarU = () => {
           <span className="text-gray-400 block">Peternak</span>
         </div>
 
-        <ul className="space-y-2 tracking-wide mt-8">
+        <ul className="space-y-8 tracking-wide mt-16">
           <li>
             <a
-              href="#"
-              className="relative px-4 py-3 flex items-center space-x-4 hover:rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400"
+              onClick={() => navigate("/peternak")}
+              className="relative cursor-pointer px-4 py-3 flex items-center space-x-4 hover:rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400"
             >
               <svg className="-ml-1 h-6 w-6" viewBox="0 0 24 24" fill="none">
                 <path
@@ -42,34 +44,8 @@ const SidebarU = () => {
 
           <li>
             <a
-              href="#"
-              className="relative px-4 py-3 flex items-center space-x-4 hover:rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  className="fill-current text-gray-300 group-hover:text-cyan-300"
-                  fillRule="evenodd"
-                  d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z"
-                  clipRule="evenodd"
-                />
-                <path
-                  className="fill-current text-gray-600 group-hover:text-cyan-600"
-                  d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z"
-                />
-              </svg>
-              <span className="-mr-1 font-medium">Pakan</span>
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#"
-              className="relative px-4 py-3 flex items-center space-x-4 hover:rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400"
+              onClick={() => navigate("/perawatan")}
+              className="relative cursor-pointer px-4 py-3 flex items-center space-x-4 hover:rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -139,32 +115,6 @@ const SidebarU = () => {
                 />
               </svg>
               <span className="-mr-1 font-medium">Panen</span>
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#"
-              className="relative px-4 py-3 flex items-center space-x-4 hover:rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  className="fill-current text-gray-300 group-hover:text-cyan-300"
-                  d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"
-                />
-                <path
-                  className="fill-current text-gray-600 group-hover:text-cyan-600"
-                  fillRule="evenodd"
-                  d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="-mr-1 font-medium">Content</span>
             </a>
           </li>
         </ul>

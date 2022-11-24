@@ -1,53 +1,38 @@
 import axios from "axios";
-import jwt_decode from "jwt-decode";
-import dayjs from "dayjs";
-import { Navigate } from "react-router-dom";
+import jwtDecode from "jwt-decode";
 
 const baseURL = "https://apigoatday.dekakrens.my.id";
-let accessToken = localStorage.getItem("accessToken");
+let accessToken = localStorage.getItem("accessToken")
+  ? localStorage.getItem("accessToken")
+  : null;
 
-const instance = axios.create({
+const axiosJWT = axios.create({
   baseURL,
-  headers: { "Content-Type": "application/x-www-form-urlencoded" },
 });
 
-instance.interceptors.request.use(async (req) => {
-  const user = jwt_decode(accessToken);
-  const isExpired = dayjs.unix(user.exp).diff(dayjs()) < 1;
-
-  if (!isExpired) {
-    req.headers.Authorization = `Bearer ${accessToken}`;
-    return req;
+const refreshToken = async () => {
+  try {
+    await axios.get(`${baseURL}/token`, { accessToken: accessToken });
+  } catch (error) {
+    console.log(error);
   }
+};
 
-  await axios
-    .post(`${baseURL}/token`, null, {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-    })
-    .then((res) => {
-      localStorage.setItem("accessToken", res.data.data.token);
-      return req;
-    })
-    .catch((e) => {
-      sessionStorage.clear();
-      localStorage.clear();
-      Navigate("/");
-      window.location.reload();
-    });
+axiosJWT.interceptors.request.use(
+  async (config) => {
+    accessToken = localStorage.getItem("accessToken");
+    let currentDate = new Date();
+    const expDate = jwtDecode(accessToken);
 
-  instance.interceptors.response.use(
-    (res) => res,
-    (err) => {
-      const statusCode = err.response.status;
-      if (statusCode == 401 || statusCode == 403) {
-        localStorage.clear();
-        sessionStorage.clear();
-      }
-      throw new Error(err.response?.data?.message);
+    if (expDate * 1000 < currentDate.getTime()) {
+      await refreshToken();
+      config.headers.Authorization = `Bearer ${accessToken}`;
     }
-  );
-});
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
-export default instance;
+export default axiosJWT;

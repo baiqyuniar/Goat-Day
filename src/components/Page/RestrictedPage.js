@@ -4,7 +4,7 @@ import Login from "./Login";
 
 const Auth = () => {
   if (localStorage.getItem("accessToken")) {
-    return false;
+    return true;
   }
 };
 

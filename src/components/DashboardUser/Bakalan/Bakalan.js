@@ -5,7 +5,7 @@ const Bakalan = () => {
   const product = [
     {
       name: "KODE",
-      picture: require("../../assets/kambing.png"),
+      picture: require("../../../assets/kambing.png"),
       alt: "Kambing",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, id tenetur consectetur, rem vel repudiandae, obcaecati autem corporis maxime laborum debitis ullam. Similique nisi, porro perspiciatis vel ipsam aliquam repudiandae. Facilis dolorem incidunt nobis quaerat exercitationem quos eaque ducimus aut possimus, aperiam, enim nulla provident! Ad necessitatibus atque pariatur, iste dignissimos ex.",
@@ -14,7 +14,7 @@ const Bakalan = () => {
     },
     {
       name: "KODE",
-      picture: require("../../assets/kambing.png"),
+      picture: require("../../../assets/kambing.png"),
       alt: "Kambing",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, id tenetur consectetur, rem vel repudiandae, obcaecati autem corporis maxime laborum debitis ullam. Similique nisi, porro perspiciatis vel ipsam aliquam repudiandae. Facilis dolorem incidunt nobis quaerat exercitationem quos eaque ducimus aut possimus, aperiam, enim nulla provident! Ad necessitatibus atque pariatur, iste dignissimos ex.",
@@ -23,7 +23,7 @@ const Bakalan = () => {
     },
     {
       name: "KODE",
-      picture: require("../../assets/kambing.png"),
+      picture: require("../../../assets/kambing.png"),
       alt: "Kambing",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, id tenetur consectetur, rem vel repudiandae, obcaecati autem corporis maxime laborum debitis ullam. Similique nisi, porro perspiciatis vel ipsam aliquam repudiandae. Facilis dolorem incidunt nobis quaerat exercitationem quos eaque ducimus aut possimus, aperiam, enim nulla provident! Ad necessitatibus atque pariatur, iste dignissimos ex.",
@@ -42,8 +42,11 @@ const Bakalan = () => {
             }`}
           >
             <div className="mx-auto lg:items-center py-8 lg:py-0 px-4 sm:px-6 w-full max-w-7xl lg:max-w-screen-xl bg-white grid grid-cols-1 gap-8 lg:justify-center">
-              {product.map((data) => (
-                <div className="mx-auto  max-w-2xl lg:max-w-none grid md:grid-cols-2 gap-x-5">
+              {product.map((data, name) => (
+                <div
+                  key={name}
+                  className="mx-auto  max-w-2xl lg:max-w-none grid md:grid-cols-2 gap-x-5"
+                >
                   <div className="order-first lg:order-last col-span-full lg:col-span-1 relative rounded-sm border-2 border-gray-200">
                     <img
                       src={data.picture}
