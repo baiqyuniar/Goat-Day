@@ -2,14 +2,13 @@ import axios from "axios";
 import jwtDecode from "jwt-decode";
 import dayjs from "dayjs";
 
-const baseURL = "https://apigoatday.dekakrens.my.id";
-// const baseURL = "http://localhost:5000";
+const baseURL = process.env.REACT_APP_BASE_URL;
+
 let accessToken = localStorage.getItem("accessToken")
   ? localStorage.getItem("accessToken")
   : null;
 
 const axiosJWT = axios.create({
-  withCredentials: true,
   baseURL,
 });
 
@@ -25,14 +24,22 @@ axiosJWT.interceptors.request.use(
       return req;
     }
 
-    await axios.get(`${baseURL}/token`).then((res) => {
-      localStorage.setItem("accessToken", res.data?.accessToken);
-      req.headers.Authorization = `Bearer ${res.data?.accessToken}`;
-      return req;
-    });
+    await axios
+      .get(`${baseURL}/token`)
+      .then((res) => {
+        localStorage.setItem("accessToken", res.data?.accessToken);
+        req.headers.Authorization = `Bearer ${res.data?.accessToken}`;
+        return req;
+      })
+      .catch((e) => {
+        if (e) {
+          localStorage.clear();
+        }
+      });
   },
   (error) => {
-    return Promise.reject(error);
+    throw new Error(error);
+    // return Promise.reject(error);
   }
 );
 

@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import Logo from "../../assets/Logo.png";
 import axios from "axios";
+import React, { useEffect, useRef, useState } from "react";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import Logo from "../../assets/Logo.png";
 import Dashboard from "../DashboardPage/index";
 
 const Login = () => {
@@ -34,19 +34,15 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "https://apigoatday.dekakrens.my.id/login",
-        {
-          email: email,
-          password: password,
-        }
-      );
-      // Cookies.set("accessToken", response.data.accessToken);
-      localStorage.setItem("accessToken", response.data.accessToken);
+      await axios
+        .post(`${process.env.REACT_APP_BASE_URL}/login`, { email, password })
+        .then((res) => {
+          localStorage.setItem("accessToken", res.data.accessToken);
+        });
       setSuccess(true);
     } catch (error) {
       if (error.response) {
-        setErrMsg(error.response.data.errMsg);
+        setErrMsg(error.response.data.message);
       }
     }
   };
